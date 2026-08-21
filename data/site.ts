@@ -69,18 +69,26 @@ export const argumentsList = [
   {
     title: "Un accompagnement clair",
     text: "Du premier contact à la mise en ligne, chaque étape est expliquée. Un planning précis, pour que vous sachiez toujours où on en est.",
+    icon: "/images/icons/accompagnement-dequipe.png",
+    iconAlt: "Accompagnement du client",
   },
   {
     title: "La techno qui vous convient",
     text: "CMS, no-code, développement sur-mesure ou automatisation : je choisis l’outil le plus pertinent, pas le plus à la mode.",
+    icon: "/images/icons/adaptation.png",
+    iconAlt: "Adaptation aux besoins du client",
   },
   {
     title: "Conçu pour vos objectifs",
     text: "Visibilité, conversions, crédibilité : le site n’est pas une vitrine décorative. Il soutient réellement le développement de votre activité.",
+    icon: "/images/icons/cibler.png",
+    iconAlt: "Cibler les objectifs du client",
   },
   {
     title: "Zéro frais caché",
     text: "Dès le départ, vous connaissez le prix global et ce qu’il inclut. Pas d’options dissimulées, pas de facturation imprévue.",
+    icon: "/images/icons/afficher.png",
+    iconAlt: "Transparence des tarifs",
   },
 ] as const;
 
