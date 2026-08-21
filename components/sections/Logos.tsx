@@ -9,7 +9,7 @@ export function Logos() {
         {logos.map((logo) => (
           <div
             key={logo.alt}
-            className="grid h-12 w-36 shrink-0 place-items-center"
+            className="grid h-12 shrink-0 place-items-center"
           >
             <Image
               src={logo.src}

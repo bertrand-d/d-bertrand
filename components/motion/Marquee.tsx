@@ -20,12 +20,12 @@ export function Marquee({
     >
       <div
         className={cn(
-          "flex w-max",
+          "flex w-max gap-20",
           slow ? "animate-marquee-slow" : "animate-marquee",
         )}
       >
-        <div className="flex shrink-0 items-stretch gap-5 pr-5">{children}</div>
-        <div className="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden>
+        <div className="flex shrink-0 items-stretch gap-20">{children}</div>
+        <div className="flex shrink-0 items-stretch gap-20" aria-hidden>
           {children}
         </div>
       </div>

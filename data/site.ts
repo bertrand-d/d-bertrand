@@ -3,7 +3,7 @@ export const site = {
   shortName: "d.bertrand",
   title: "Delphine Bertrand — Développeuse web freelance",
   description:
-    "Développeuse web freelance spécialisée dans la création de sites sur mesure. React, Next.js, design systems. France et Luxembourg.",
+    "Développeuse web freelance spécialisée dans la création de sites web et applications sur mesure. React, Next.js, design systems. France et Luxembourg.",
   url: "https://www.d-bertrand.fr",
   email: "dbertrand.webdev@gmail.com",
   phone: "+33 7 76 05 98 11",
@@ -38,8 +38,7 @@ export const logos = [
   { src: "/images/logos/nayro.png", alt: "Nayro" },
   { src: "/images/logos/the_next_stories_logo.png", alt: "The Next Stories" },
   { src: "/images/logos/mhc.png", alt: "Metz Hockey Club" },
-  { src: "/images/logos/Logo_AFM.png", alt: "AFM" },
-  { src: "/images/logos/illuminerie.png", alt: "Illuminerie" },
+  { src: "/images/logos/Logo_AFM.png", alt: "AFM" }
 ] as const;
 
 export const processSteps = [

@@ -63,9 +63,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.22 }}
             className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted/90 sm:text-lg"
           >
-            Le regard d’une designer, la rigueur d’une développeuse. Sites sur
-            mesure, intégration Figma et automatisations — livrés sans friction,
-            du premier appel à la mise en ligne.
+            Le regard d’une designeuse, la rigueur d’une développeuse. Sites sur
+            mesure, intégrations Figma et automatisations — livrés sans friction,
+            du premier appel jusqu'à la mise en ligne.
           </motion.p>
 
           <motion.div
@@ -99,28 +99,25 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto mt-16 max-w-4xl"
         >
-          <div className="glass relative overflow-hidden rounded-[32px] p-4 sm:p-6">
-            <div className="grid items-center gap-8 md:grid-cols-[1fr_1.1fr]">
-              <div className="relative mx-auto aspect-square w-full max-w-[280px]">
-                <div className="absolute inset-6 rounded-full bg-primary/30 blur-3xl" />
-                <div className="relative h-full overflow-hidden rounded-[2rem] border border-white/10">
-                  <Image
-                    src="/images/hero/me.png"
-                    alt="Delphine Bertrand, développeuse web freelance"
-                    fill
-                    priority
-                    className="object-cover object-top"
-                    sizes="280px"
-                  />
-                </div>
+          <div className="glass relative overflow-hidden rounded-[32px]">
+            <div className="grid md:grid-cols-[minmax(220px,42%)_1fr] md:items-stretch">
+              <div className="relative min-h-[260px] sm:min-h-[320px]">
+                <Image
+                  src="/images/hero/me.png"
+                  alt="Delphine Bertrand, développeuse web freelance"
+                  fill
+                  priority
+                  className="object-cover object-[center_18%] max-md:[mask-image:linear-gradient(to_bottom,black_58%,transparent)] md:[mask-image:linear-gradient(to_right,black_48%,transparent)]"
+                  sizes="(max-width: 768px) 100vw, 420px"
+                />
               </div>
 
-              <div className="space-y-5 px-2 pb-2">
+              <div className="space-y-5 px-6 py-8 sm:px-10 sm:py-12">
                 <p className="font-display text-2xl text-white sm:text-3xl">
                   Delphine Bertrand
                 </p>
                 <p className="text-muted/85">
-                  6 ans à transformer des maquettes en interfaces nettes,
+                  6 ans d'expertise dans la transformation des maquettes en interfaces nettes,
                   performantes, et construites avec des composants réutilisables.
                 </p>
                 <ul className="grid grid-cols-3 gap-3">
