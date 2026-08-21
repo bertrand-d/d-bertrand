@@ -1,3 +1,4 @@
+import { HoverRoll } from "@/components/ui/HoverRoll";
 import { cn } from "@/lib/cn";
 import Link from "next/link";
 
@@ -34,11 +35,13 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 will-change-transform",
+    "group inline-flex items-center justify-center rounded-full font-semibold tracking-tight transition-all duration-300 will-change-transform",
     variants[variant],
     sizes[size],
     className,
   );
+
+  const content = <HoverRoll>{children}</HoverRoll>;
 
   if (href) {
     return (
@@ -49,14 +52,14 @@ export function Button({
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {})}
       >
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button className={classes} {...props}>
-      {children}
+      {content}
     </button>
   );
 }
