@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { AccentWord } from "@/components/ui/AccentWord";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 import { StarRating } from "@/components/ui/StarRating";
 import { site, testimonials } from "@/data/site";
@@ -54,7 +55,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.12 }}
             className="font-display text-[2.4rem] leading-[1.08] font-semibold tracking-tight text-white sm:text-6xl md:text-7xl"
           >
-            Je crée des sites web qui convertissent
+            Je crée des sites web qui <AccentWord>convertissent</AccentWord>
           </motion.h1>
 
           <motion.p

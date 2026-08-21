@@ -112,26 +112,34 @@ body {
   animation-play-state: paused;
 }
 
-@keyframes draw-loop {
-  0% {
-    stroke-dashoffset: 1;
-    opacity: 0.4;
+@keyframes accent-shift {
+  from {
+    background-position: 0% 50%;
   }
-  20% {
-    opacity: 1;
-  }
-  55% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
+  to {
+    background-position: 100% 50%;
   }
 }
 
-.draw-circle {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw-loop 2.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+.accent-word {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 18px rgba(177, 5, 229, 0.45));
+}
+
+.accent-word__text {
+  background: linear-gradient(
+    105deg,
+    #ffffff 0%,
+    #e9b8ff 28%,
+    var(--primary-bright) 62%,
+    var(--primary) 100%
+  );
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: accent-shift 5.5s ease-in-out infinite alternate;
 }
 
 @keyframes pulse-glow {
@@ -155,12 +163,8 @@ body {
 
   .animate-marquee,
   .animate-marquee-slow,
-  .draw-circle,
+  .accent-word__text,
   .pulse-glow {
     animation: none !important;
-  }
-
-  .draw-circle {
-    stroke-dashoffset: 0;
   }
 }
