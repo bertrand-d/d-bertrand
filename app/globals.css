@@ -1,26 +1,195 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #050709;
+  --surface: #140c1c;
+  --surface-2: #0f0715;
+  --primary: #9000bb;
+  --primary-bright: #b105e5;
+  --secondary: #4f0067;
+  --ink: #102039;
+  --muted: #dddddd;
+  --offwhite: #f6f3fc;
+  --white: #ffffff;
+  --grey: #747779;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-primary: var(--primary);
+  --color-primary-bright: var(--primary-bright);
+  --color-secondary: var(--secondary);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-offwhite: var(--offwhite);
+  --color-grey: var(--grey);
+  --font-sans: var(--font-sora);
+  --font-display: var(--font-syne);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--secondary);
+}
+
+[id] {
+  scroll-margin-top: 6.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--muted);
+  font-family: var(--font-sora), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.font-display {
+  font-family: var(--font-syne), var(--font-sora), system-ui, sans-serif;
+}
+
+.glass {
+  background:
+    radial-gradient(circle at 120% 200%, rgba(45, 22, 49, 0), rgba(20, 9, 19, 0.72))
+      padding-box,
+    linear-gradient(
+        135deg,
+        rgba(204, 100, 218, 0.46) 0%,
+        rgba(200, 100, 218, 0.12) 25%,
+        rgba(191, 100, 218, 0.12) 50%,
+        rgba(185, 100, 218, 0.12) 75%,
+        rgba(181, 100, 218, 0.25) 100%
+      )
+      border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(20px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--white) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.noise::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 52s linear infinite;
+}
+
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-slow,
+.marquee-pause:hover .animate-marquee,
+.marquee-pause:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5.5s ease-in-out infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit)) rotate(-360deg);
+  }
+}
+
+.orbit {
+  animation: orbit 14s linear infinite;
+}
+
+@keyframes draw-loop {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 1;
+  }
+  55% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-circle {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-loop 2.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee,
+  .animate-marquee-slow,
+  .animate-float,
+  .orbit,
+  .draw-circle,
+  .pulse-glow {
+    animation: none !important;
+  }
+
+  .draw-circle {
+    stroke-dashoffset: 0;
+  }
 }
