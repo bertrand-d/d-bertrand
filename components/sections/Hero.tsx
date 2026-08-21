@@ -53,25 +53,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.12 }}
             className="font-display text-[2.4rem] leading-[1.08] font-semibold tracking-tight text-white sm:text-6xl md:text-7xl"
           >
-            Je crée des sites web qui{" "}
-            <span className="relative inline-block">
-              convertissent
-              <svg
-                className="pointer-events-none absolute -inset-x-3 -inset-y-1 h-[calc(100%+12px)] w-[calc(100%+24px)] overflow-visible"
-                viewBox="0 0 220 70"
-                fill="none"
-                aria-hidden
-              >
-                <path
-                  className="draw-circle"
-                  pathLength={1}
-                  d="M18 38 C 12 12, 70 6, 112 10 C 168 16, 214 22, 206 40 C 198 60, 140 64, 90 62 C 40 60, 24 54, 18 38 Z"
-                  stroke="#b105e5"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+            Je crée des sites web qui convertissent
           </motion.h1>
 
           <motion.p

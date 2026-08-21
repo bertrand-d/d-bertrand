@@ -31,7 +31,7 @@ export function Header() {
       <Container className="relative z-50 pt-4">
         <div
           className={cn(
-            "flex items-center justify-between gap-4 rounded-full border px-3 py-2 transition-all duration-300 sm:px-4",
+            "flex items-center justify-between gap-4 rounded-full border px-3 py-2 transition-all duration-300 sm:px-8",
             scrolled
               ? "border-white/10 bg-[#050709]/80 shadow-lg shadow-black/30 backdrop-blur-xl"
               : "border-white/8 bg-white/4 backdrop-blur-md",

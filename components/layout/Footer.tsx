@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="relative z-10 border-t border-white/8 pb-10 pt-16">
       <Container className="flex flex-col items-center gap-8 text-center">
-        <Logo className="text-xl" />
+        <Logo size="lg" />
         <nav aria-label="Pied de page">
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted/80">
             {nav.map((item) => (
