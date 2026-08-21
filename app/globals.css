@@ -112,33 +112,6 @@ body {
   animation-play-state: paused;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-float {
-  animation: float 5.5s ease-in-out infinite;
-}
-
-@keyframes orbit {
-  from {
-    transform: rotate(0deg) translateX(var(--orbit)) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(var(--orbit)) rotate(-360deg);
-  }
-}
-
-.orbit {
-  animation: orbit 14s linear infinite;
-}
-
 @keyframes draw-loop {
   0% {
     stroke-dashoffset: 1;
@@ -182,8 +155,6 @@ body {
 
   .animate-marquee,
   .animate-marquee-slow,
-  .animate-float,
-  .orbit,
   .draw-circle,
   .pulse-glow {
     animation: none !important;

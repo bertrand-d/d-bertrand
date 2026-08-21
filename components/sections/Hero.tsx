@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SocialIcons } from "@/components/ui/SocialIcons";
 import { StarRating } from "@/components/ui/StarRating";
 import { site, testimonials } from "@/data/site";
 import { motion } from "framer-motion";
@@ -86,23 +87,9 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-7 flex items-center justify-center gap-3"
+            className="mt-7 flex justify-center"
           >
-            {[
-              { href: site.socials.malt, label: "Malt" },
-              { href: site.socials.linkedin, label: "LinkedIn" },
-              { href: site.socials.github, label: "GitHub" },
-            ].map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-muted/80 transition-colors hover:border-primary/50 hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
+            <SocialIcons />
           </motion.div>
         </div>
 
@@ -126,24 +113,6 @@ export function Hero() {
                     sizes="280px"
                   />
                 </div>
-                <OrbitingIcon
-                  src="/images/hero/react.png"
-                  alt="React"
-                  className="top-[8%] right-[2%]"
-                  delay="0s"
-                />
-                <OrbitingIcon
-                  src="/images/hero/js.png"
-                  alt="JavaScript"
-                  className="bottom-[18%] left-[-4%]"
-                  delay="1.2s"
-                />
-                <OrbitingIcon
-                  src="/images/hero/webflow.png"
-                  alt="Webflow"
-                  className="bottom-[-2%] right-[12%]"
-                  delay="2.4s"
-                />
               </div>
 
               <div className="space-y-5 px-2 pb-2">
@@ -177,27 +146,6 @@ export function Hero() {
         </motion.div>
       </Container>
     </section>
-  );
-}
-
-function OrbitingIcon({
-  src,
-  alt,
-  className,
-  delay,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  delay: string;
-}) {
-  return (
-    <span
-      className={`animate-float absolute z-10 grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-surface/90 shadow-lg ${className}`}
-      style={{ animationDelay: delay }}
-    >
-      <Image src={src} alt={alt} width={28} height={28} />
-    </span>
   );
 }
 
