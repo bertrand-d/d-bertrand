@@ -20,8 +20,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 pr-4"
+            className="mb-7"
           >
+            <span className="rating-chip inline-flex items-center gap-3 rounded-full border border-primary/35 bg-white/8 px-3 py-1.5 pr-4">
             <span className="flex -space-x-2">
               {avatars.map((person) => (
                 <Image
@@ -37,6 +38,7 @@ export function Hero() {
             <StarRating size={13} />
             <span className="text-xs font-medium text-offwhite sm:text-sm">
               5/5 · 100% recommandée
+            </span>
             </span>
           </motion.div>
 

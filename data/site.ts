@@ -29,9 +29,9 @@ export const nav = [
 ] as const;
 
 export const logos = [
-  { src: "/images/logos/volkswagen.png", alt: "Volkswagen" },
   { src: "/images/logos/ath.png", alt: "ATH Agency" },
   { src: "/images/logos/soundatech.png", alt: "Soundatech" },
+  { src: "/images/logos/volkswagen.png", alt: "Volkswagen" },
   { src: "/images/logos/keneya.png", alt: "Keneya" },
   { src: "/images/logos/editus.png", alt: "Editus" },
   { src: "/images/logos/ohigo.png", alt: "Ohigo" },
