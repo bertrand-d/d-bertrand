@@ -16,7 +16,7 @@ export function Process() {
         <Reveal>
           <SectionHeading
             eyebrow="Process"
-            title="Trois étapes. Zéro prise de tête."
+            title="Trois étapes sans prise de tête."
             subtitle="Je réalise vos souhaits sous la forme d’un projet web unique, qui vous inspire et vous ressemble."
           />
         </Reveal>

@@ -126,7 +126,7 @@ export function Hero() {
                 <ul className="grid grid-cols-3 gap-3">
                   {[
                     ["6+", "ans d’exp."],
-                    ["5/5", "sur Malt"],
+                    ["+20", "projets réalisés"],
                     ["100%", "recommandée"],
                   ].map(([value, label]) => (
                     <li

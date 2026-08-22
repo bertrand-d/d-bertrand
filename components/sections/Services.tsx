@@ -11,8 +11,8 @@ export function Services() {
         <Reveal>
           <SectionHeading
             eyebrow="Services"
-            title="Ce que je mets sur la table"
-            subtitle="Sites, intégration, design system, automatisation. Une seule interlocutrice, un rendu soigné."
+            title="Ce que je vous propose"
+            subtitle="Sites, applications, intégrations, design systems robustes, automatisations... Une seule interlocutrice, un rendu soigné."
           />
         </Reveal>
 

@@ -96,7 +96,7 @@ export const services = [
   {
     id: "01",
     title: "Sites sur mesure",
-    text: "Landing pages, sites vitrine et plateformes. Une interface fidèle à votre image, rapide, responsive, pensée pour convertir.",
+    text: "Landing pages, sites vitrine, e-commerce, applications... Une interface fidèle à votre image, rapide, responsive, pensée pour convertir.",
     tags: ["React", "Next.js", "TypeScript", "Webflow"],
   },
   {
@@ -114,8 +114,8 @@ export const services = [
   {
     id: "04",
     title: "Automatisation",
-    text: "Scripts, webhooks, Playwright : je retire le manuel de vos process. Moins d’erreurs, plus d’heures récupérées chaque semaine.",
-    tags: ["Playwright", "Webhooks", "Node.js"],
+    text: "Scripts, agents IA, webhooks, Playwright : je retire l'aspect manuel de vos process. Moins d’erreurs, plus d’heures récupérées chaque semaine.",
+    tags: ["IA", "n8n", "Webhooks", "Node.js", "Playwright"],
   },
 ] as const;
 

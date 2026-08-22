@@ -23,8 +23,8 @@ export function Contrast() {
         <Reveal>
           <SectionHeading
             eyebrow="Pourquoi ça change tout"
-            title="Votre site travaille-t-il vraiment pour vous ?"
-            subtitle="La question n’est pas d’avoir un site. C’est qu’un prospect comprenne, en quelques secondes, que vous êtes la bonne personne."
+            title="Votre site est-il vraiment fait pour vous ?"
+            subtitle="La question n’est pas seulement d’avoir un site. C’est qu’un prospect comprenne, en quelques secondes, que vous êtes la bonne personne."
           />
         </Reveal>
 
