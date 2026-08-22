@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative z-10 py-20 sm:py-28">
+    <section id="portfolio" className="relative z-10 overflow-x-clip py-20 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
