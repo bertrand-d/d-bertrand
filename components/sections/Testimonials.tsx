@@ -60,48 +60,59 @@ export function Testimonials() {
 
       <Container>
         <Reveal delay={0.12}>
-          <Card className="mx-auto mt-12 max-w-md text-center" hover={false}>
-            <p className="text-sm text-muted">Notée</p>
-            <p className="mt-3 flex items-center justify-center gap-2 text-sm">
-              <StarRating />
-              <span>
-                sur{" "}
+          <Card className="mx-auto mt-12 max-w-[400px] text-center text-base text-muted" hover={false}>
+            Notée:
+            <div className="mt-3 flex flex-col gap-2.5">
+              <p className="flex items-center justify-center gap-1">
+                <StarRating size={20} />
+                sur
                 <a
                   href={site.socials.malt}
-                  className="text-primary-bright hover:underline"
+                  className="text-primary transition-colors hover:text-primary-bright"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Malt
                 </a>
-              </span>
-            </p>
-            <p className="mt-2 flex items-center justify-center gap-2 text-sm">
-              <StarRating />
-              <span>
-                sur{" "}
+              </p>
+              <p className="flex items-center justify-center gap-1">
+                <StarRating size={20} />
+                sur
                 <a
                   href={site.socials.google}
-                  className="text-primary-bright hover:underline"
+                  className="text-primary transition-colors hover:text-primary-bright"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Google
                 </a>
-              </span>
-            </p>
-            <p className="mt-4 font-display text-2xl text-primary-bright">100%</p>
-            <p className="text-sm text-muted">
-              recommandée sur{" "}
-              <a
-                href={site.socials.linkedin}
-                className="text-primary-bright hover:underline"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-            </p>
+              </p>
+              <p className="flex items-center justify-center gap-1">
+                <span className="text-[2rem] font-semibold leading-none text-primary">
+                  100%
+                </span>{" "}
+                recommandée sur
+              </p>
+              <p className="flex items-center justify-center gap-1">
+                <a
+                  href={site.socials.linkedin}
+                  className="text-primary transition-colors hover:text-primary-bright"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
+                et
+                <a
+                  href={site.socials.collective}
+                  className="text-primary transition-colors hover:text-primary-bright"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Collective work
+                </a>
+              </p>
+            </div>
             <Button href="#contact" className="mt-6">
               Me contacter
             </Button>
