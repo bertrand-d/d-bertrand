@@ -101,7 +101,7 @@ export const services = [
   },
   {
     id: "02",
-    title: "Intégration Figma",
+    title: "Intégrations Figma",
     text: "De la maquette au code, pixel perfect. Composants réutilisables, design system respecté, animations soignées.",
     tags: ["Pixel perfect", "Atomic design", "Responsive"],
   },
@@ -113,7 +113,7 @@ export const services = [
   },
   {
     id: "04",
-    title: "Automatisation",
+    title: "Automatisations",
     text: "Scripts, agents IA, webhooks, Playwright : je retire l'aspect manuel de vos process. Moins d’erreurs, plus d’heures récupérées chaque semaine.",
     tags: ["IA", "n8n", "Webhooks", "Node.js", "Playwright"],
   },

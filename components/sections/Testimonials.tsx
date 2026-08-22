@@ -15,7 +15,7 @@ export function Testimonials() {
         <Reveal>
           <SectionHeading
             eyebrow="Avis"
-            title="Ils ont déjà travaillé avec moi"
+            title="Ils sont pleinement satisfaits"
             subtitle="Agences, fondateurs, associations : le même fil, un rendu propre et une collab fluide."
           />
         </Reveal>
