@@ -22,12 +22,27 @@ export function Portfolio() {
       </Container>
 
       <Reveal delay={0.1}>
-        <div className="mt-12">
-          <Marquee slow>
-            {works.map((work) => (
-              <WorkCard key={work.title} work={work} />
-            ))}
-          </Marquee>
+        <div className="relative mt-16 py-6 sm:py-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-28"
+          />
+          <div className="flex origin-center -rotate-[6deg] scale-110 flex-col gap-5 sm:-rotate-[7deg]">
+            <Marquee slow reverse className="before:hidden after:hidden">
+              {works.filter((_, index) => index % 2 === 0).map((work) => (
+                <WorkCard key={work.title} work={work} />
+              ))}
+            </Marquee>
+            <Marquee slow className="before:hidden after:hidden">
+              {works.filter((_, index) => index % 2 === 1).map((work) => (
+                <WorkCard key={work.title} work={work} />
+              ))}
+            </Marquee>
+          </div>
         </div>
       </Reveal>
     </section>
