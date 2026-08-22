@@ -16,11 +16,54 @@ const syne = Syne({
   display: "swap",
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      name: site.name,
+      url: site.url,
+      image: `${site.url}/images/hero/me.png`,
+      jobTitle: "Développeuse web freelance",
+      email: site.email,
+      telephone: site.phone,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Paris",
+        addressCountry: "FR",
+      },
+      sameAs: [
+        site.socials.malt,
+        site.socials.linkedin,
+        site.socials.github,
+      ],
+    },
+    {
+      "@type": "WebSite",
+      name: site.name,
+      url: site.url,
+      description: site.description,
+      inLanguage: "fr-FR",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: site.title,
+  title: {
+    default: site.title,
+    template: `%s — ${site.name}`,
+  },
   description: site.description,
   authors: [{ name: site.name }],
+  creator: site.name,
+  alternates: {
+    canonical: "./",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: site.title,
     description: site.description,
@@ -28,7 +71,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "fr_FR",
     type: "website",
-    images: [{ url: "/images/hero/me.png" }],
+    images: [{ url: "/images/hero/me.png", alt: site.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: ["/images/hero/me.png"],
   },
 };
 
@@ -39,6 +88,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sora.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="noise flex min-h-full flex-col bg-bg text-muted">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VYNG9WZ812"
           strategy="afterInteractive"

@@ -343,7 +343,7 @@ export const offers = [
       "Animations et interactions",
       "Outils tiers (Calendly, CRM, newsletter…)",
       "Conseils stratégiques",
-      "Livré en 2 à 4 semaines",
+      "Livraison selon estimation du projet",
     ],
   },
 ] as const;
@@ -363,7 +363,7 @@ export const faqs = [
   },
   {
     q: "Quel est le délai de livraison ?",
-    a: "Une landing page : 1 à 2 semaines. Un site plus complet : 3 à 8 semaines. Un délai estimatif est toujours fourni avec le devis. L’offre Starter peut être livrée en 48h à 5 jours.",
+    a: "Un délai estimatif est toujours fourni avec le devis. L’offre Starter peut être livrée en 48h à 5 jours.",
   },
   {
     q: "Comment se passe la collaboration ?",
@@ -371,6 +371,6 @@ export const faqs = [
   },
   {
     q: "Travailles-tu avec les agences ?",
-    a: "Oui, régulièrement. Intégration Figma, renforcement de design system, pages à livrer vite : je m’intègre à vos process et à vos outils.",
+    a: "Oui, régulièrement. Création d'applications, intégrations Figma, renforcement de design system, automatisations, pages à livrer rapidement : je m’intègre à vos process et à vos outils.",
   },
 ] as const;
