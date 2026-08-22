@@ -286,7 +286,7 @@ export const testimonials = [
     name: "Sébastien Goubrievsky",
     role: "Directeur SI, Editus",
     quote:
-      "Cette capacité rare de comprendre rapidement les enjeux. Elle excelle dans la création d’UIs intuitives. Sa rigueur et son sens du détail en font une personne de confiance.",
+      "Elle a cette capacité rare de comprendre rapidement les enjeux. Elle excelle dans la création d’UIs intuitives. Sa rigueur et son sens du détail en font une personne de confiance.",
     photo: "/images/testimonials/user/seb-goub.jpg",
     logo: "/images/testimonials/logo/editus.png",
   },
