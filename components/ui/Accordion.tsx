@@ -8,7 +8,7 @@ export function Accordion({
 }: {
   items: readonly { q: string; a: string }[];
 }) {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 md:items-start">

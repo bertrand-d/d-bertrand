@@ -358,7 +358,7 @@ export const faqs = [
     a: "Absolument. Correction de bugs, performances, SEO technique, responsive, nouvelles pages ou refonte complète : je m’adapte à l’existant.",
   },
   {
-    q: "Proposes-tu une maintenance après la livraison ?",
+    q: "Y a t-il une maintenance après la livraison ?",
     a: "Oui, selon votre rythme : documentation et formation, forfait mensuel d’heures réservées, ou interventions à la demande sans engagement.",
   },
   {
