@@ -209,6 +209,21 @@ body {
   animation: pulse-glow 6s ease-in-out infinite;
 }
 
+@keyframes hint-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.hint-blink {
+  animation: hint-blink 2.2s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -222,7 +237,8 @@ body {
   .animate-marquee-y-reverse,
   .accent-word__text,
   .rating-chip,
-  .pulse-glow {
+  .pulse-glow,
+  .hint-blink {
     animation: none !important;
   }
 }

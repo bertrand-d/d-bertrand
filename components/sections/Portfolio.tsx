@@ -16,13 +16,30 @@ export function Portfolio() {
           <SectionHeading
             eyebrow="Portfolio"
             title="Des projets déjà en ligne"
-            subtitle="Création de A à Z, intégration, maintenance ou automatisation. Survolez pour découvrir."
+            subtitle="Création de A à Z, intégration, maintenance ou automatisation."
           />
+          <p className="hint-blink mt-8 flex flex-col items-center gap-2.5 text-center text-[15px] font-medium tracking-[0.02em] text-primary-bright">
+            Survolez pour découvrir
+            <svg
+              viewBox="0 0 12 12"
+              fill="none"
+              aria-hidden
+              className="h-3 w-3 shrink-0"
+            >
+              <path
+                d="M2.5 4.5 6 8l3.5-3.5"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </p>
         </Reveal>
       </Container>
 
       <Reveal delay={0.1}>
-        <div className="relative mt-16 py-6 sm:py-10">
+        <div className="relative mt-7 py-6 sm:py-10">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28"
@@ -64,14 +81,14 @@ function WorkCard({ work }: { work: (typeof works)[number] }) {
 
   return (
     <article
-      className="w-[300px] shrink-0 sm:w-[380px]"
+      className="w-[220px] shrink-0 sm:w-[380px]"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => {
         setHover(false);
         setIndex(0);
       }}
     >
-      <div className="overflow-hidden rounded-[22px] border border-primary/20 bg-surface shadow-[0_12px_40px_rgba(0,0,0,0.28)] transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(144,0,187,0.22)]">
+      <div className="overflow-hidden rounded-[22px] border border-primary/20 bg-surface shadow-[0_12px_40px_rgba(0,0,0,0.28)] transition-[border-color,box-shadow] duration-500 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(144,0,187,0.22)]">
         <div className="relative aspect-2/1 bg-bg">
           {frames.map((src, i) => (
             <Image
