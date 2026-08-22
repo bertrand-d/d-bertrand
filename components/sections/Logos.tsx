@@ -5,7 +5,7 @@ import Image from "next/image";
 export function Logos() {
   return (
     <section aria-label="Clients et partenaires" className="relative z-10 py-10">
-      <Marquee>
+      <Marquee gapClassName="gap-10 pr-10 sm:gap-[60px] sm:pr-[60px]">
         {logos.map((logo) => (
           <div
             key={logo.alt}

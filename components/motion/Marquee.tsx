@@ -5,11 +5,13 @@ export function Marquee({
   className,
   slow = false,
   reverse = false,
+  gapClassName = "gap-5 pr-5",
 }: {
   children: React.ReactNode;
   className?: string;
   slow?: boolean;
   reverse?: boolean;
+  gapClassName?: string;
 }) {
   const animation = reverse
     ? slow
@@ -29,8 +31,13 @@ export function Marquee({
       )}
     >
       <div className={cn("flex w-max", animation)}>
-        <div className="flex shrink-0 items-stretch gap-5 pr-5">{children}</div>
-        <div className="flex shrink-0 items-stretch gap-5 pr-5" aria-hidden>
+        <div className={cn("flex shrink-0 items-stretch", gapClassName)}>
+          {children}
+        </div>
+        <div
+          className={cn("flex shrink-0 items-stretch", gapClassName)}
+          aria-hidden
+        >
           {children}
         </div>
       </div>
