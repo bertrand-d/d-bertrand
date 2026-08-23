@@ -22,7 +22,7 @@ export function Pricing() {
             <Reveal key={offer.name} delay={index * 0.08}>
               <Card className="relative h-full">
                 {offer.tag ? (
-                  <span className="absolute top-5 right-5 rounded-xl bg-primary px-3 py-1 text-xs font-semibold text-white">
+                  <span className="absolute sm:top-5 sm:right-5 top-3 right-3 rounded-xl bg-primary px-3 py-1 text-xs font-semibold text-white">
                     {offer.tag}
                   </span>
                 ) : null}

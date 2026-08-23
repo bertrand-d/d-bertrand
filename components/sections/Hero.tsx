@@ -22,7 +22,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="mb-7"
           >
-            <span className="rating-chip inline-flex items-center gap-3 rounded-full border border-primary/35 bg-white/8 px-3 py-1.5 pr-4">
+            <span className="rating-chip flex-col md:flex-row inline-flex items-center gap-3 rounded-full border border-primary/35 bg-white/8 px-10 md:px-3 py-1.5">
             <span className="flex -space-x-2">
               {avatars.map((person) => (
                 <Image
@@ -123,7 +123,7 @@ export function Hero() {
                   6 ans d'expertise dans la transformation des maquettes en interfaces nettes,
                   performantes, et construites avec des composants réutilisables.
                 </p>
-                <ul className="grid grid-cols-3 gap-3">
+                <ul className="grid md:grid-cols-3 gap-3">
                   {[
                     ["6+", "ans d’exp."],
                     ["+20", "projets réalisés"],
