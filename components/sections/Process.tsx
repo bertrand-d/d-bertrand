@@ -38,7 +38,7 @@ export function Process() {
   });
 
   return (
-    <section id="process" className="relative z-10 py-20 sm:py-28">
+    <section id="process" className="relative z-10 overflow-x-clip py-20 sm:py-28 md:overflow-x-visible">
       <Container>
         <Reveal>
           <SectionHeading

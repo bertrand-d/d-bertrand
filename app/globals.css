@@ -35,6 +35,12 @@ html {
   scrollbar-color: var(--primary) var(--secondary);
 }
 
+@media (max-width: 767px) {
+  html {
+    overflow-x: clip;
+  }
+}
+
 [id] {
   scroll-margin-top: 6.5rem;
 }
