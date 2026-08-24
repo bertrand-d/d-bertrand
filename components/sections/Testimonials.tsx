@@ -140,7 +140,7 @@ function TestimonialCard({
         />
         <div className="min-w-0 flex-1">
           <p className="truncate font-display text-white">{item.name}</p>
-          <p className="truncate text-sm text-grey">{item.role}</p>
+          <p className="text-sm leading-snug text-grey">{item.role}</p>
         </div>
         <Image
           src={item.logo}

@@ -236,9 +236,9 @@ export const works = [
 export const testimonials = [
   {
     name: "Julia Michaux",
-    role: "Fondatrice, Ohigo",
+    role: "Fondatrice de la marque de vêtements pour femmes, Ohigo",
     quote:
-      "C’est une personne très gentille, à l’écoute, réactive, disponible et qui prend le temps d’échanger afin de trouver les bonnes solutions. Je recommande son travail à 100%.",
+      "Je suis très satisfaite du travail de Delphine. C'est une personne très gentille, à l'écoute, réactive, disponible et qui prends le temps d'échanger afin de trouver les bonnes solutions pour ses clients. Je vous recommande son travail à 100% et je n'hésiterai pas à retravailler avec elle les yeux fermés.",
     photo: "/images/testimonials/user/JuliaMichaux.webp",
     logo: "/images/testimonials/logo/ohigo.png",
   },
@@ -246,7 +246,7 @@ export const testimonials = [
     name: "Nataliya Chernova",
     role: "CEO, Happy Raise",
     quote:
-      "Très professionnelle et impliquée. Elle a su vite comprendre le problème et trouver une solution en temps record. Pédagogue, elle maîtrise parfaitement les rendez-vous clients.",
+      "Delphine s'est montrée très professionnelle et impliquée dans le projet qui nous lui avons confié. Elle a su vite comprendre le problème et trouver une solution en temps record. Delphine est très pedagogue et maitrise bien la tenue des rendez-vous clients en direct.",
     photo: "/images/testimonials/user/NataliyaChernova.webp",
     logo: "/images/testimonials/logo/happy-raise.png",
   },
@@ -254,15 +254,15 @@ export const testimonials = [
     name: "Virgile Speth",
     role: "CEO, Keneya",
     quote:
-      "Un seul mot : professionnalisme. Je recommande vivement Delphine pour son travail, sa disponibilité, ses recommandations, sa sympathie et son implication.",
+      "J’ai eu la chance de travailler avec Delphine sur mon site internet. Un seul mot ressort de cette collaboration : professionnalisme ! Je recommande vivement Delphine pour son travail bien sûr mais aussi pour sa disponibilité, ses recommandations, sa sympathie et son implication ! Delphine je conclurai en te remerciant à nouveau pour la qualité de ton travail.",
     photo: "/images/testimonials/user/v-speth-keneya.jpeg",
     logo: "/images/testimonials/logo/keneya.png",
   },
   {
     name: "Alexis Theulier",
-    role: "CEO et DA, ATH Agency",
+    role: "CEO et directeur artistique, ATH Agency",
     quote:
-      "Un travail pro, de la meilleure qualité, une écoute parfaite, un souci du détail. En bref, la personne idéale pour votre projet. Nous avons hâte de retravailler avec elle.",
+      "Nous avons travaillé avec Delphine sur un projet Web, et que dire si ce n'est que nous avons hâte de retravailler avec elle. Un travail pro, de la meilleure qualité qui soit, une écoute et une attention parfaite, un soucis du détail, en bref, la personne idéale pour votre projet. Encore merci !",
     photo: "/images/testimonials/user/Alexis-theulier.jpg",
     logo: "/images/testimonials/logo/ath.png",
   },
@@ -270,7 +270,7 @@ export const testimonials = [
     name: "Yannick Closset",
     role: "CEO, Soundatech",
     quote:
-      "Une dev incroyablement talentueuse. Je cherchais quelqu’un pour une automation quasi impossible : elle a réussi son pari. Disponible et rapide, un vrai bonheur.",
+      "Une dev incroyablement talentueuse ! Je cherchais quelqu'un pour une automation quasi impossible sur notre nouvelle app, elle a réussi son pari. Vous pouvez y aller les yeux fermés. Disponible et rapide, un vrai bonheur ! Encore merci Delphine 👍",
     photo: "/images/testimonials/user/yannick.png",
     logo: "/images/testimonials/logo/soundatech.png",
   },
@@ -278,15 +278,15 @@ export const testimonials = [
     name: "Philippe Boyer",
     role: "CEO, Nayro",
     quote:
-      "Dès le départ j’ai été rassuré par son professionnalisme, son écoute et ses conseils. Le résultat est parfait. Je vous recommande Delphine sans hésiter.",
+      "J'ai travaillé avec Delphine sur le lancement de mon activité et donc par la création de mon site internet. Dès le départ j'ai été rassuré par son professionnalisme, son écoute et ses conseils et le résultat est parfait! Je continue de travailler avec elle sur la V2 de notre site et sa réactivité est top, je vous recommande Delphine sans hésiter pour la création, la maintenance et le suivi de vos sites internet.",
     photo: "/images/testimonials/user/p-boyer-nayro.jpeg",
     logo: "/images/testimonials/logo/nayro.png",
   },
   {
     name: "Sébastien Goubrievsky",
-    role: "Directeur SI, Editus",
+    role: "Directeur Service Informatique, Editus",
     quote:
-      "Elle a cette capacité rare de comprendre rapidement les enjeux. Elle excelle dans la création d’UIs intuitives. Sa rigueur et son sens du détail en font une personne de confiance.",
+      "Delphine a cette capacité rare de comprendre rapidement les enjeux et d'adapter son travail pour répondre aux besoins. Elle excelle dans la création d'U.I.s intuitives et fluides, tout en respectant les best practices afin de répondre aux contraintes de projets. Sa rigueur et son sens du détail sont palpables au quotidien et font d'elle une personne de confiance sur qui on peut toujours compter.",
     photo: "/images/testimonials/user/seb-goub.jpg",
     logo: "/images/testimonials/logo/editus.png",
   },
@@ -294,15 +294,15 @@ export const testimonials = [
     name: "Alexis Presti",
     role: "CEO & UI Designer, TPress Studio",
     quote:
-      "Toujours impliquée, elle a respecté l’ensemble de mes maquettes tout en apportant ses avis. Très agréable de travailler avec elle, je recommande fortement.",
+      "Delphine a très rapidement su être à l’écoute dans nos projets. Toujours impliquée , elle a réussi à respecter l’ensemble de mes maquettes tout en apportant ses avis au long des projets. C’était très agréable de travailler avec elle , je recommande fortement.",
     photo: "/images/testimonials/user/Alexis.jpg",
     logo: "/images/testimonials/logo/tpress.png",
   },
   {
     name: "Michel Dufour",
-    role: "Président, AICMC",
+    role: "Président de l'association, AICMC",
     quote:
-      "Très compétente, à l’écoute des besoins et impératifs. Excellente communication, et de vrais conseils pour améliorer le fonctionnement du site.",
+      "Delphine est une personne très compétente, à l'écoute des besoins et impératifs du client. Elle connaît parfaitement ses limites, et lorsqu'elle s'engage va jusqu'au bout de la tache à réaliser. Excellente communication par rapport à son activité pour notre association, mais aussi en termes de conseils pour améliorer le fonctionnement du site.",
     photo: "/images/testimonials/user/michel-dufour.jpg",
     logo: "/images/testimonials/logo/aicmc.png",
   },
