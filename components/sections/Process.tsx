@@ -58,7 +58,12 @@ export function Process() {
           <div ref={timelineRef} className="relative mt-8">
             <ProcessLine progress={scrollYProgress} />
             <StepScene step={processSteps[0]} align="left" />
-            <StepScene step={processSteps[1]} align="right" />
+            <StepScene
+              step={processSteps[1]}
+              align="right"
+              lineProgress={scrollYProgress}
+              glow="soft"
+            />
             <LastStepScene step={processSteps[2]} lineProgress={scrollYProgress} />
           </div>
         )}
@@ -122,9 +127,13 @@ function ProcessLine({ progress }: { progress: MotionValue<number> }) {
 function StepScene({
   step,
   align,
+  lineProgress,
+  glow,
 }: {
   step: (typeof processSteps)[number];
   align: "left" | "right";
+  lineProgress?: MotionValue<number>;
+  glow?: "soft";
 }) {
   const isDesktop = useIsDesktop();
   const ref = useRef<HTMLDivElement>(null);
@@ -140,6 +149,35 @@ function StepScene({
   );
   const opacity = useTransform(scrollYProgress, [0, 0.08], [0.35, 1]);
 
+  // Soft glow when the vertical cursor reaches step 2 (~mid timeline).
+  const glowProgress = lineProgress ?? scrollYProgress;
+  const glowOpacity = useTransform(glowProgress, [0.32, 0.45], [0, 0.85]);
+  const cardGlow = useTransform(
+    glowProgress,
+    [0.32, 0.45],
+    [
+      "0 0 0 1px rgba(177,5,229,0), 0 0 16px rgba(177,5,229,0), 0 0 36px rgba(144,0,187,0)",
+      "0 0 0 1px rgba(177,5,229,0.6), 0 0 28px rgba(177,5,229,0.38), 0 0 64px rgba(144,0,187,0.28)",
+    ],
+  );
+
+  const card = (
+    <div className="relative">
+      {glow === "soft" ? (
+        <motion.div
+          aria-hidden
+          style={{ opacity: glowOpacity }}
+          className="pointer-events-none absolute -inset-8 -z-10 rounded-[40px] bg-[radial-gradient(circle_at_center,rgba(177,5,229,0.38),rgba(144,0,187,0.14)_45%,transparent_72%)] blur-2xl"
+        />
+      ) : null}
+      <StepCard
+        step={step}
+        style={glow === "soft" ? { boxShadow: cardGlow } : undefined}
+        glow={glow === "soft" ? "soft" : false}
+      />
+    </div>
+  );
+
   return (
     <div ref={ref} className="relative pb-6 md:h-[66vh] md:pb-0">
       <div className="md:sticky md:top-24 lg:top-28">
@@ -149,7 +187,7 @@ function StepScene({
               style={isDesktop ? { scale, opacity } : undefined}
               className="relative z-10 w-full max-w-xl origin-center pl-4 md:max-w-none md:justify-self-end md:pl-0 md:pr-2"
             >
-              <StepCard step={step} />
+              {card}
             </motion.div>
           ) : (
             <>
@@ -158,7 +196,7 @@ function StepScene({
                 style={isDesktop ? { scale, opacity } : undefined}
                 className="relative z-10 w-full max-w-xl origin-center pl-4 md:max-w-none md:pl-2"
               >
-                <StepCard step={step} />
+                {card}
               </motion.div>
             </>
           )}
@@ -183,10 +221,10 @@ function LastStepScene({
   });
   const scale = useTransform(scrollYProgress, [0, 1], [0.84, 1.08]);
   const opacity = useTransform(scrollYProgress, [0, 0.2], [0.35, 1]);
-  const glowOpacity = useTransform(lineProgress, [0.88, 0.97], [0, 1]);
+  const glowOpacity = useTransform(lineProgress, [0.78, 0.9], [0, 1]);
   const cardGlow = useTransform(
     lineProgress,
-    [0.88, 0.97],
+    [0.78, 0.9],
     [
       "0 0 0 1px rgba(177,5,229,0), 0 0 24px rgba(177,5,229,0), 0 0 60px rgba(144,0,187,0)",
       "0 0 0 1px rgba(177,5,229,0.9), 0 0 36px rgba(177,5,229,0.55), 0 0 90px rgba(144,0,187,0.42)",
@@ -204,7 +242,7 @@ function LastStepScene({
           style={{ opacity: glowOpacity }}
           className="pointer-events-none absolute -inset-10 -z-10 rounded-[40px] bg-[radial-gradient(circle_at_center,rgba(177,5,229,0.5),rgba(144,0,187,0.18)_45%,transparent_72%)] blur-2xl"
         />
-        <StepCard step={step} style={{ boxShadow: cardGlow }} glow />
+        <StepCard step={step} style={{ boxShadow: cardGlow }} glow="strong" />
       </motion.div>
     </div>
   );
@@ -217,14 +255,15 @@ function StepCard({
 }: {
   step: (typeof processSteps)[number];
   style?: MotionStyle;
-  glow?: boolean;
+  glow?: false | "soft" | "strong";
 }) {
   return (
     <motion.article
       style={style}
       className={cn(
         "glass rounded-[28px] p-7 sm:p-9",
-        glow && "border-primary-bright/80",
+        glow === "soft" && "border-primary-bright/55",
+        glow === "strong" && "border-primary-bright/80",
       )}
     >
       <p className="font-display text-4xl text-primary/80">{step.id}</p>
