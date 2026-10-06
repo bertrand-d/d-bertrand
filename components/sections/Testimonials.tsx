@@ -12,15 +12,27 @@ const columns = [0, 1, 2].map((column) =>
   testimonials.filter((_, index) => index % 3 === column),
 );
 
-export function Testimonials() {
+export function Testimonials({
+  title = "Ils sont pleinement satisfaits",
+  subtitle = "Agences, fondateurs, associations : le même fil, un rendu propre et une collab fluide.",
+  ctaHref = "#contact",
+  ctaLabel = "Me contacter",
+  ctaExternal = false,
+}: {
+  title?: string;
+  subtitle?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  ctaExternal?: boolean;
+}) {
   return (
     <section id="avis" className="relative z-10 py-20 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
             eyebrow="Avis"
-            title="Ils sont pleinement satisfaits"
-            subtitle="Agences, fondateurs, associations : le même fil, un rendu propre et une collab fluide."
+            title={title}
+            subtitle={subtitle}
           />
         </Reveal>
       </Container>
@@ -113,8 +125,8 @@ export function Testimonials() {
                 </a>
               </p>
             </div>
-            <Button href="#contact" className="mt-6">
-              Me contacter
+            <Button href={ctaHref} external={ctaExternal} className="mt-6">
+              {ctaLabel}
             </Button>
           </Card>
         </Reveal>

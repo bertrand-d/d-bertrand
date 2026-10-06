@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { SocialIcons } from "@/components/ui/SocialIcons";
-import { nav, site } from "@/data/site";
+import { nav as defaultNav, site, type NavItem } from "@/data/site";
 import { cn } from "@/lib/cn";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({ items = defaultNav }: { items?: readonly NavItem[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
@@ -76,7 +76,7 @@ export function Header() {
             className="hidden items-center gap-1 lg:flex"
             aria-label="Navigation principale"
           >
-            {nav.map((item) => (
+            {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -160,7 +160,7 @@ export function Header() {
                 aria-label="Menu mobile"
               >
                 <ul className="space-y-1">
-                  {nav.map((item, index) => (
+                  {items.map((item, index) => (
                     <motion.li
                       key={item.href}
                       initial={reduce ? { opacity: 0 } : { opacity: 0, x: -18 }}

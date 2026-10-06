@@ -8,33 +8,43 @@ import { works } from "@/data/site";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export function Portfolio() {
+export function Portfolio({
+  title = "Des projets déjà en ligne",
+  subtitle = "Création ou refonte de A à Z, webdesign, intégration, webmastering ou automatisation.",
+  showHint = true,
+}: {
+  title?: string;
+  subtitle?: string;
+  showHint?: boolean;
+}) {
   return (
     <section id="portfolio" className="relative z-10 overflow-x-clip py-20 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
             eyebrow="Portfolio"
-            title="Des projets déjà en ligne"
-            subtitle="Création ou refonte de A à Z, webdesign, intégration, webmastering ou automatisation."
+            title={title}
+            subtitle={subtitle}
           />
-          <p className="hint-blink mt-8 flex flex-col items-center gap-2.5 text-center text-[15px] font-medium tracking-[0.02em] text-primary-bright">
-            Survolez pour découvrir
-            <svg
-              viewBox="0 0 12 12"
-              fill="none"
-              aria-hidden
-              className="h-3 w-3 shrink-0"
-            >
-              <path
-                d="M2.5 4.5 6 8l3.5-3.5"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </p>
+          {showHint ? (
+            <p className="hint-blink mt-8 flex flex-col items-center gap-2.5 text-center text-[15px] font-medium tracking-[0.02em] text-primary-bright">
+              Survolez pour découvrir
+              <svg
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden
+                className="h-3 w-3 shrink-0"
+              >
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </p>
+          ) : null}
         </Reveal>
       </Container>
 

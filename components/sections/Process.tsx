@@ -29,7 +29,13 @@ function useIsDesktop() {
   return isDesktop;
 }
 
-export function Process() {
+export function Process({
+  title = "Trois étapes sans prise de tête.",
+  subtitle = "De la création à la refonte, je mène votre projet web de A à Z — un site unique, qui vous inspire et vous ressemble.",
+}: {
+  title?: string;
+  subtitle?: string;
+}) {
   const reduce = useReducedMotion();
   const timelineRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -43,8 +49,8 @@ export function Process() {
         <Reveal>
           <SectionHeading
             eyebrow="Process"
-            title="Trois étapes sans prise de tête."
-            subtitle="De la création à la refonte, je mène votre projet web de A à Z — un site unique, qui vous inspire et vous ressemble."
+            title={title}
+            subtitle={subtitle}
           />
         </Reveal>
 

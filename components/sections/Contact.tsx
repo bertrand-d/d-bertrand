@@ -2,28 +2,51 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/data/site";
+import { cn } from "@/lib/cn";
 
-export function Contact() {
+type ContactProps = {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  ctaLabel?: string;
+  showLocation?: boolean;
+  className?: string;
+};
+
+export function Contact({
+  id = "contact",
+  eyebrow = "Contact",
+  title = "Travaillons ensemble",
+  description = "Création de site, refonte, webdesign ou webmastering ? Une question, un brief : réservez un créneau. Pas de démarchage commercial.",
+  ctaLabel = "Booker un appel",
+  showLocation = true,
+  className,
+}: ContactProps) {
   return (
-    <section id="contact" className="relative z-10 py-20 sm:py-28">
+    <section
+      id={id}
+      className={cn("relative z-10 py-20 sm:py-28", className)}
+    >
       <Container>
         <Reveal>
           <div className="glass overflow-hidden rounded-[32px] px-6 py-12 sm:px-12 sm:py-16">
             <div className="grid min-w-0 items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary-bright">
-                  Contact
+                  {eyebrow}
                 </p>
                 <h2 className="font-display mt-3 text-3xl font-semibold text-white sm:text-5xl">
-                  <span className="text-gradient">Travaillons ensemble</span>
+                  <span className="text-gradient">{title}</span>
                 </h2>
-                <p className="mt-4 max-w-lg text-muted/90">
-                  Création de site, refonte, webdesign ou webmastering ? Une
-                  question, un brief : réservez un créneau. Pas de démarchage
-                  commercial.
-                </p>
-                <Button href={site.calendar} external size="lg" className="mt-8 max-w-full">
-                  Booker un appel
+                <p className="mt-4 max-w-lg text-muted/90">{description}</p>
+                <Button
+                  href={site.calendar}
+                  external
+                  size="lg"
+                  className="mt-8 max-w-full"
+                >
+                  {ctaLabel}
                 </Button>
               </div>
               <ul className="min-w-0 space-y-5">
@@ -37,7 +60,9 @@ export function Contact() {
                   value={site.email}
                   href={`mailto:${site.email}`}
                 />
-                <Info label="Localisation" value={site.location} />
+                {showLocation ? (
+                  <Info label="Localisation" value={site.location} />
+                ) : null}
               </ul>
             </div>
           </div>

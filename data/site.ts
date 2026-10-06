@@ -19,14 +19,24 @@ export const site = {
   },
 } as const;
 
-export const nav = [
+export type NavItem = {
+  href: string;
+  label: string;
+};
+
+export const nav: NavItem[] = [
   { href: "/#process", label: "Process" },
   { href: "/#services", label: "Services" },
   { href: "/#portfolio", label: "Portfolio" },
   { href: "/#avis", label: "Avis" },
   { href: "/#offres", label: "Offres" },
   { href: "/#faq", label: "FAQ" },
-] as const;
+];
+
+export const footerExtraLinks: NavItem[] = [
+  { href: "/creation-site-web/", label: "Création de site web" },
+  { href: "/mentions-legales/", label: "Mentions légales" },
+];
 
 export const logos = [
   { src: "/images/logos/ath.png", alt: "ATH Agency" },

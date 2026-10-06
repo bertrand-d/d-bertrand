@@ -5,15 +5,21 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { offers, site } from "@/data/site";
 
-export function Pricing() {
+export function Pricing({
+  title = "Choisissez la formule qui vous convient",
+  subtitle = "Deux cadres clairs pour votre création ou refonte de site. Le devis final s’adapte toujours à votre projet.",
+}: {
+  title?: string;
+  subtitle?: string;
+}) {
   return (
     <section id="offres" className="relative z-10 py-20 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
             eyebrow="Offres"
-            title="Choisissez la formule qui vous convient"
-            subtitle="Deux cadres clairs pour votre création ou refonte de site. Le devis final s’adapte toujours à votre projet."
+            title={title}
+            subtitle={subtitle}
           />
         </Reveal>
 
@@ -22,7 +28,7 @@ export function Pricing() {
             <Reveal key={offer.name} delay={index * 0.08}>
               <Card className="relative h-full">
                 {offer.tag ? (
-                  <span className="absolute sm:top-5 sm:right-5 top-3 right-3 rounded-xl bg-primary px-3 py-1 text-xs font-semibold text-white">
+                  <span className="absolute top-3 right-3 rounded-xl bg-primary px-3 py-1 text-xs font-semibold text-white sm:top-5 sm:right-5">
                     {offer.tag}
                   </span>
                 ) : null}
@@ -30,7 +36,9 @@ export function Pricing() {
                   Offre {offer.name}
                 </h3>
                 <p className="mt-4 text-muted/90">{offer.pitch}</p>
-                <p className="mt-2 text-sm text-grey">Idéal pour : {offer.ideal}</p>
+                <p className="mt-2 text-sm text-grey">
+                  Idéal pour : {offer.ideal}
+                </p>
                 <Button href={site.calendar} external className="mt-7 w-full">
                   {offer.cta}
                 </Button>
