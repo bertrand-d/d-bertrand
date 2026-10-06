@@ -30,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${site.url}/refonte-site-web/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${site.url}/mentions-legales/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
