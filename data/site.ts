@@ -3,7 +3,7 @@ export const site = {
   shortName: "d.bertrand",
   title: "Delphine Bertrand — Développeuse web & webdesigner freelance",
   description:
-    "Développeuse web et webdesigner freelance : création et refonte de sites vitrine, applications sur mesure, intégration Figma et webmastering. React, Next.js. France et Luxembourg.",
+    "Développeuse web et webdesigner freelance : création et refonte de sites vitrine, applications sur mesure, intégration Figma et webmastering. React, Next.js, Node.js. France et Luxembourg.",
   url: "https://www.d-bertrand.fr",
   email: "dbertrand.webdev@gmail.com",
   phone: "+33 7 76 05 98 11",
@@ -53,7 +53,7 @@ export const processSteps = [
     id: "02",
     title: "Planification & intégration",
     duration: "selon le projet",
-    text: "Choix des technologies, architecture en composants réutilisables, puis intégration pixel perfect. Vous savez toujours où on en est.",
+    text: "Choix des technologies, architecture front et back si besoin, composants réutilisables, puis intégration pixel perfect. Vous savez toujours où on en est.",
     points: ["Stack adaptée", "Composants réutilisables", "Suivi transparent"],
   },
   {
@@ -96,8 +96,8 @@ export const services = [
   {
     id: "01",
     title: "Création & refonte de sites",
-    text: "Site vitrine, landing page, e-commerce ou application : je conçois et développe une interface fidèle à votre image, rapide, responsive, pensée pour convertir. Idéal aussi pour une refonte.",
-    tags: ["Site vitrine", "React", "Next.js", "Webflow"],
+    text: "Site vitrine, landing page, e-commerce ou application : je développe de bout en bout une interface fidèle à votre image, rapide, responsive, pensée pour convertir. Idéal aussi pour une refonte.",
+    tags: ["Site vitrine", "React", "Next.js", "Node.js"],
   },
   {
     id: "02",
@@ -371,6 +371,6 @@ export const faqs = [
   },
   {
     q: "Travailles-tu avec les agences ?",
-    a: "Oui, régulièrement. Création d'applications, intégrations Figma, renforcement de design system, automatisations, pages à livrer rapidement : je m’intègre à vos process et à vos outils.",
+    a: "Oui, régulièrement. Renfort fullstack avec une vraie appétence front : intégrations Figma, design systems, APIs, automatisations, lots à livrer rapidement. Je m’intègre à vos process et à vos outils.",
   },
 ] as const;

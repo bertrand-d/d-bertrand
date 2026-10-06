@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AmbientGlow } from "@/components/motion/AmbientGlow";
+import { Agencies } from "@/components/sections/Agencies";
 import { Arguments } from "@/components/sections/Arguments";
 import { Contact } from "@/components/sections/Contact";
 import { Contrast } from "@/components/sections/Contrast";
@@ -25,6 +26,7 @@ export default function Home() {
         <Process />
         <Arguments />
         <Services />
+        <Agencies />
         <Portfolio />
         <Testimonials />
         <Pricing />

@@ -120,9 +120,9 @@ export function Hero() {
                   Delphine Bertrand
                 </p>
                 <p className="text-muted/85">
-                  6 ans d’expertise en création de sites et en webdesign : je
-                  transforme vos maquettes en interfaces nettes, performantes, et
-                  construites avec des composants réutilisables.
+                  6 ans d’expertise, aujourd’hui fullstack avec une forte
+                  appétence front : je livre des sites et apps soignés, du
+                  parcours utilisateur jusqu’aux APIs quand il le faut.
                 </p>
                 <ul className="grid md:grid-cols-3 gap-3">
                   {[

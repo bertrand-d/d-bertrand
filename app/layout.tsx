@@ -27,7 +27,8 @@ const jsonLd = {
       jobTitle: "Développeuse web et webdesigner freelance",
       description: site.description,
       knowsAbout: [
-        "Développement web",
+        "Développement web fullstack",
+        "Développement front-end",
         "Webdesign",
         "Création de site vitrine",
         "Refonte de site web",
@@ -35,6 +36,7 @@ const jsonLd = {
         "Intégration Figma",
         "React",
         "Next.js",
+        "Node.js",
       ],
       email: site.email,
       telephone: site.phone,

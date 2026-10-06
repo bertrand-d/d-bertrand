@@ -7,9 +7,18 @@ alwaysApply: true
 
 Objectif : être trouvable aussi avec le vocabulaire des clients (webdesigner, webmaster, création / refonte de site…), pas seulement « développeur ».
 
+## Positionnement (validé avec Delphine)
+
+- Métier réel : **développeuse web fullstack** avec **forte appétence front**.
+- « Webdesigner » / « webmaster » = jargon TPE / AE / PME (souvent synonymes de « personne qui fait le site »). Les utiliser sur la home est voulu.
+- Design possible via thème, UI assistée par IA, ou mise en relation avec un designer — pas un pivot métier « je suis webdesigner ».
+- Double audience :
+  - PME : création / refonte, offres, vocabulaire accessible
+  - Agences / missions : section `#agences` (fullstack + appétence front) + preuves tech (Figma, design systems, portfolio)
+
 ## Plan validé avec Delphine
 
-1. **Enrichir le wording de la home** — title, meta, H1/H2, services, copy visible. Identité principale : développeuse. Termes secondaires glissés naturellement. *(fait / à maintenir)*
+1. **Enrichir le wording de la home** — title, meta, copy visible. Identité : développeuse + termes client. *(fait / à maintenir)*
 2. **Pages de landing ciblées** — à faire ensuite. Intentions possibles :
    - `/creation-site-vitrine`
    - `/refonte-site-web`
