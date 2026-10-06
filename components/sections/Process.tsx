@@ -44,7 +44,7 @@ export function Process() {
           <SectionHeading
             eyebrow="Process"
             title="Trois étapes sans prise de tête."
-            subtitle="Je réalise vos souhaits sous la forme d’un projet web unique, qui vous inspire et vous ressemble."
+            subtitle="De la création à la refonte, je mène votre projet web de A à Z — un site unique, qui vous inspire et vous ressemble."
           />
         </Reveal>
 

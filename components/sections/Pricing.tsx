@@ -13,7 +13,7 @@ export function Pricing() {
           <SectionHeading
             eyebrow="Offres"
             title="Choisissez la formule qui vous convient"
-            subtitle="Deux cadres clairs. Le devis final s’adapte toujours à votre projet."
+            subtitle="Deux cadres clairs pour votre création ou refonte de site. Le devis final s’adapte toujours à votre projet."
           />
         </Reveal>
 

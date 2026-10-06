@@ -18,8 +18,9 @@ export function Contact() {
                   <span className="text-gradient">Travaillons ensemble</span>
                 </h2>
                 <p className="mt-4 max-w-lg text-muted/90">
-                  Une question, un brief, un projet à lancer ? Réservez un
-                  créneau. Pas de démarchage commercial.
+                  Création de site, refonte, webdesign ou webmastering ? Une
+                  question, un brief : réservez un créneau. Pas de démarchage
+                  commercial.
                 </p>
                 <Button href={site.calendar} external size="lg" className="mt-8 max-w-full">
                   Booker un appel

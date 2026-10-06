@@ -1,0 +1,26 @@
+---
+description: Roadmap SEO site d-bertrand — vocabulaire client et prochaines étapes
+alwaysApply: true
+---
+
+# Roadmap SEO (d-bertrand)
+
+Objectif : être trouvable aussi avec le vocabulaire des clients (webdesigner, webmaster, création / refonte de site…), pas seulement « développeur ».
+
+## Plan validé avec Delphine
+
+1. **Enrichir le wording de la home** — title, meta, H1/H2, services, copy visible. Identité principale : développeuse. Termes secondaires glissés naturellement. *(fait / à maintenir)*
+2. **Pages de landing ciblées** — à faire ensuite. Intentions possibles :
+   - `/creation-site-vitrine`
+   - `/refonte-site-web`
+   - `/webdesigner-freelance`
+   - éventuellement `/webmaster-freelance` ou `/site-web-sur-mesure`
+   Une page = un besoin, un CTA, des preuves (avis / portfolio).
+3. ~~FAQ SEO~~ — non retenue pour l’instant.
+4. **Blog** — après les landing pages. Contenu « problème client », pas tutos tech. Rythme réaliste (1–2 articles/mois utiles).
+
+## Principes
+
+- Ne pas keyword-stuff : le ton reste naturel et premium.
+- Garder « développeuse » comme signal de marque principal.
+- Aligner title / description / JSON-LD / sections visibles.

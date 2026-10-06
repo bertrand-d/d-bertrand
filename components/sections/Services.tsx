@@ -12,7 +12,7 @@ export function Services() {
           <SectionHeading
             eyebrow="Services"
             title="Ce que je vous propose"
-            subtitle="Sites, applications, intégrations, design systems robustes, automatisations... Une seule interlocutrice, un rendu soigné."
+            subtitle="Création et refonte de sites, webdesign, intégration Figma, webmastering et automatisations. Une seule interlocutrice, un rendu soigné."
           />
         </Reveal>
 

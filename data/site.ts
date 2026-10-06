@@ -1,9 +1,9 @@
 export const site = {
   name: "Delphine Bertrand",
   shortName: "d.bertrand",
-  title: "Delphine Bertrand — Développeuse web freelance",
+  title: "Delphine Bertrand — Développeuse web & webdesigner freelance",
   description:
-    "Développeuse web freelance spécialisée dans la création de sites web et applications sur mesure. React, Next.js, design systems. France et Luxembourg.",
+    "Développeuse web et webdesigner freelance : création et refonte de sites vitrine, applications sur mesure, intégration Figma et webmastering. React, Next.js. France et Luxembourg.",
   url: "https://www.d-bertrand.fr",
   email: "dbertrand.webdev@gmail.com",
   phone: "+33 7 76 05 98 11",
@@ -20,12 +20,12 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "#process", label: "Process" },
-  { href: "#services", label: "Services" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#avis", label: "Avis" },
-  { href: "#offres", label: "Offres" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#process", label: "Process" },
+  { href: "/#services", label: "Services" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#avis", label: "Avis" },
+  { href: "/#offres", label: "Offres" },
+  { href: "/#faq", label: "FAQ" },
 ] as const;
 
 export const logos = [
@@ -95,15 +95,15 @@ export const argumentsList = [
 export const services = [
   {
     id: "01",
-    title: "Sites sur mesure",
-    text: "Landing pages, sites vitrine, e-commerce, applications... Une interface fidèle à votre image, rapide, responsive, pensée pour convertir.",
-    tags: ["React", "Next.js", "TypeScript", "Webflow"],
+    title: "Création & refonte de sites",
+    text: "Site vitrine, landing page, e-commerce ou application : je conçois et développe une interface fidèle à votre image, rapide, responsive, pensée pour convertir. Idéal aussi pour une refonte.",
+    tags: ["Site vitrine", "React", "Next.js", "Webflow"],
   },
   {
     id: "02",
-    title: "Intégrations Figma",
-    text: "De la maquette au code, pixel perfect. Composants réutilisables, design system respecté, animations soignées.",
-    tags: ["Pixel perfect", "Atomic design", "Responsive"],
+    title: "Webdesign & intégration Figma",
+    text: "Du webdesign à l’intégration pixel perfect. Composants réutilisables, design system respecté, animations soignées — une seule interlocutrice du design au code.",
+    tags: ["Webdesign", "Pixel perfect", "Responsive"],
   },
   {
     id: "03",
@@ -113,9 +113,9 @@ export const services = [
   },
   {
     id: "04",
-    title: "Automatisations",
-    text: "Scripts, agents IA, webhooks, Playwright : je retire l'aspect manuel de vos process. Moins d’erreurs, plus d’heures récupérées chaque semaine.",
-    tags: ["IA", "n8n", "Webhooks", "Node.js", "Playwright"],
+    title: "Webmastering & automatisations",
+    text: "Maintenance, évolutions, scripts et automatisations (IA, webhooks, Playwright) : je m’occupe du suivi de votre site et je retire le manuel de vos process.",
+    tags: ["Webmaster", "n8n", "Node.js", "Playwright"],
   },
 ] as const;
 

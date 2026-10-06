@@ -15,12 +15,11 @@ export function Accordion({
       {items.map((item, index) => {
         const isOpen = open === index;
         return (
-          <article key={item.q} className="glass overflow-hidden rounded-[22px]">
+          <article key={item.q} className="glass cursor-pointer overflow-hidden rounded-[22px]"  onClick={() => setOpen(isOpen ? null : index)}>
             <button
               type="button"
-              className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+              className="flex cursor-pointer w-full items-center justify-between gap-4 px-6 py-5 text-left"
               aria-expanded={isOpen}
-              onClick={() => setOpen(isOpen ? null : index)}
             >
               <span className="font-display text-base font-semibold text-white sm:text-lg">
                 {item.q}

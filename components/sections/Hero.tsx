@@ -48,7 +48,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-primary-bright"
           >
-            Développeuse web freelance
+            Développeuse web & webdesigner freelance
           </motion.p>
 
           <motion.h1
@@ -66,9 +66,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.22 }}
             className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted/90 sm:text-lg"
           >
-            Le regard d’une designeuse, la rigueur d’une développeuse. Sites sur
-            mesure, intégrations Figma et automatisations — livrés sans friction,
-            du premier appel jusqu'à la mise en ligne.
+            Le regard d’une webdesigner, la rigueur d’une développeuse. Création
+            ou refonte de site, intégration Figma et webmastering — livrés sans
+            friction, du premier appel jusqu’à la mise en ligne.
           </motion.p>
 
           <motion.div
@@ -107,7 +107,7 @@ export function Hero() {
               <div className="relative min-h-[260px] sm:min-h-[320px]">
                 <Image
                   src="/images/hero/me.png"
-                  alt="Delphine Bertrand, développeuse web freelance"
+                  alt="Delphine Bertrand, développeuse web et webdesigner freelance"
                   fill
                   priority
                   className="object-cover object-[center_18%] max-md:[mask-image:linear-gradient(to_bottom,black_58%,transparent)] md:[mask-image:linear-gradient(to_right,black_48%,transparent)]"
@@ -120,8 +120,9 @@ export function Hero() {
                   Delphine Bertrand
                 </p>
                 <p className="text-muted/85">
-                  6 ans d'expertise dans la transformation des maquettes en interfaces nettes,
-                  performantes, et construites avec des composants réutilisables.
+                  6 ans d’expertise en création de sites et en webdesign : je
+                  transforme vos maquettes en interfaces nettes, performantes, et
+                  construites avec des composants réutilisables.
                 </p>
                 <ul className="grid md:grid-cols-3 gap-3">
                   {[

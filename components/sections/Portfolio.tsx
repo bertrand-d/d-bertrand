@@ -16,7 +16,7 @@ export function Portfolio() {
           <SectionHeading
             eyebrow="Portfolio"
             title="Des projets déjà en ligne"
-            subtitle="Création de A à Z, intégration, maintenance ou automatisation."
+            subtitle="Création ou refonte de A à Z, webdesign, intégration, webmastering ou automatisation."
           />
           <p className="hint-blink mt-8 flex flex-col items-center gap-2.5 text-center text-[15px] font-medium tracking-[0.02em] text-primary-bright">
             Survolez pour découvrir
