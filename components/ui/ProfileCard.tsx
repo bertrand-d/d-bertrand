@@ -8,12 +8,19 @@ const stats = [
   ["100%", "recommandée"],
 ] as const;
 
+const defaultBio =
+  "6 ans d’expertise, aujourd’hui fullstack avec une forte appétence front : je livre des sites et apps soignés, du parcours utilisateur jusqu’aux APIs quand il le faut.";
+
 export function ProfileCard({
   className,
   priority = false,
+  bio = defaultBio,
+  imageAlt = `${site.name}, développeuse web fullstack et webdesigner freelance`,
 }: {
   className?: string;
   priority?: boolean;
+  bio?: string;
+  imageAlt?: string;
 }) {
   return (
     <div
@@ -26,7 +33,7 @@ export function ProfileCard({
         <div className="relative min-h-[260px] sm:min-h-[320px]">
           <Image
             src="/images/hero/me.png"
-            alt={`${site.name}, développeuse web fullstack et webdesigner freelance`}
+            alt={imageAlt}
             fill
             priority={priority}
             className="object-cover object-[center_18%] max-md:[mask-image:linear-gradient(to_bottom,black_58%,transparent)] md:[mask-image:linear-gradient(to_right,black_48%,transparent)]"
@@ -38,11 +45,7 @@ export function ProfileCard({
           <p className="font-display text-2xl text-white sm:text-3xl">
             {site.name}
           </p>
-          <p className="text-muted/85">
-            6 ans d’expertise, aujourd’hui fullstack avec une forte appétence
-            front : je livre des sites et apps soignés, du parcours utilisateur
-            jusqu’aux APIs quand il le faut.
-          </p>
+          <p className="text-muted/85">{bio}</p>
           <ul className="grid gap-3 md:grid-cols-3">
             {stats.map(([value, label]) => (
               <li

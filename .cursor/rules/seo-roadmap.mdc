@@ -20,7 +20,7 @@ Objectif : être trouvable aussi avec le vocabulaire des clients (webdesigner, w
 2. **Pages de landing** — ordre validé :
    1. `/creation-site-web` — création de site (vitrine, e-commerce, landing, app) *(fait)*
    2. `/renfort-dev-agence` — agences & renfort pro *(fait)*
-   3. `/webdesigner-freelance`
+   3. `/webdesigner-freelance` — vocabulaire TPE/PME *(fait)*
    4. `/refonte-site-web`
 3. ~~FAQ SEO~~ — non retenue pour l’instant.
 4. **Blog** — après les landing pages. Contenu « problème client », pas tutos tech.
@@ -31,3 +31,4 @@ Objectif : être trouvable aussi avec le vocabulaire des clients (webdesigner, w
 - Ne pas keyword-stuff : ton naturel et premium.
 - Garder « développeuse » comme signal de marque principal.
 - Aligner title / description / JSON-LD / sections visibles.
+- **Footer HP** : ne plus ajouter de liens vers les LP au-delà de création-site-web et renfort-dev-agence. Les LP 3+ restent indexées via sitemap / maillage interne ailleurs si besoin.

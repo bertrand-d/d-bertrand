@@ -11,22 +11,22 @@ import { Container } from "@/components/ui/Container";
 import { ProfileCard } from "@/components/ui/ProfileCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StarRating } from "@/components/ui/StarRating";
-import { creationSiteWeb } from "@/data/landings/creation-site-web";
+import { webdesignerFreelance } from "@/data/landings/webdesigner-freelance";
 import { site } from "@/data/site";
 
-export function CreationSiteWebLanding() {
+export function WebdesignerFreelanceLanding() {
   return (
     <>
       <Hero />
-      <Formats />
+      <Clarify />
       <Benefits />
       <Process
         title="Trois étapes pour lancer votre site"
-        subtitle="Le même cadre clair que pour tous mes projets — adapté à votre création de site web."
+        subtitle="Un cadre simple et transparent, du premier échange jusqu’à la mise en ligne."
       />
       <Portfolio
         title="Des sites déjà en ligne"
-        subtitle="Création de A à Z pour des marques, commerces et projets qui avaient besoin d’exister correctement sur le web."
+        subtitle="Création de A à Z pour des indépendants, commerces et projets qui avaient besoin d’un vrai site."
       />
       <Testimonials
         subtitle="Indépendants, fondateurs, associations : le même fil, un rendu propre et une collab fluide."
@@ -35,14 +35,14 @@ export function CreationSiteWebLanding() {
         ctaLabel="Booker un appel"
       />
       <Pricing
-        title="Tarifs pour la création de votre site web"
-        subtitle="Deux formules claires pour démarrer votre création de site — vitrine, e-commerce ou plus. Le devis final s’adapte toujours à votre projet."
+        title="Tarifs pour votre site web"
+        subtitle="Deux formules claires pour démarrer votre projet. Le devis s’adapte toujours à votre besoin."
       />
       <Faq />
       <Contact
         eyebrow="Prochaine étape"
-        title="Parlons de votre création de site"
-        description="Un appel de 30 minutes pour cadrer le besoin, le format et le budget — ou contactez-moi directement. Pas de démarchage commercial."
+        title="Parlons de votre projet de site"
+        description="Un appel de 30 minutes pour cadrer le besoin, le design et le budget — ou contactez-moi directement. Pas de démarchage commercial."
         showLocation={false}
         className="py-16 sm:py-24"
       />
@@ -56,20 +56,20 @@ function Hero() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-primary-bright">
-            {creationSiteWeb.eyebrow}
+            {webdesignerFreelance.eyebrow}
           </p>
-          <h1 className="font-display text-[2.35rem] leading-[1.08] font-semibold tracking-tight text-white sm:text-6xl">
-            <span className="text-gradient">{creationSiteWeb.h1}</span>
+          <h1 className="font-display text-[2.2rem] leading-[1.08] font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+            <span className="text-gradient">{webdesignerFreelance.h1}</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted/90 sm:text-lg">
-            {creationSiteWeb.lead}
+            {webdesignerFreelance.lead}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button href={site.calendar} external size="lg">
               Booker un appel
             </Button>
             <Button href="#portfolio" variant="outline" size="lg">
-              Voir des exemples
+              Voir le portfolio
             </Button>
           </div>
           <p className="mt-6 flex flex-wrap items-center justify-center gap-2 text-sm text-muted/75">
@@ -82,7 +82,7 @@ function Hero() {
           <div className="relative mx-auto mt-16 max-w-4xl">
             <ProfileCard
               priority
-              imageAlt={`${site.name}, création de site web`}
+              imageAlt={`${site.name}, webdesigner freelance`}
               bio="6 ans d’expérience en création de sites web : je vous accompagne de l’idée à la mise en ligne, avec un rendu soigné et un suivi clair."
             />
           </div>
@@ -92,26 +92,24 @@ function Hero() {
   );
 }
 
-function Formats() {
+function Clarify() {
   return (
-    <section className="relative z-10 py-16 sm:py-24">
+    <section id="besoin" className="relative z-10 py-16 sm:py-24">
       <Container>
         <Reveal>
           <SectionHeading
-            eyebrow="Formats"
-            title="Quel type de site pour votre activité ?"
-            subtitle="Un besoin, une solution adaptée — sans vous perdre dans le jargon technique."
+            eyebrow="Ce que je peux créer"
+            title="Le site adapté à votre activité"
+            subtitle="Vitrine, e-commerce ou page d’offre : on part de votre besoin, pas d’un modèle générique."
           />
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {creationSiteWeb.formats.map((format, index) => (
-            <Reveal key={format.title} delay={index * 0.06}>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {webdesignerFreelance.clarify.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.06}>
               <Card className="h-full" hover={false}>
-                <h3 className="font-display text-xl text-white">
-                  {format.title}
-                </h3>
+                <h3 className="font-display text-xl text-white">{item.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted/85">
-                  {format.text}
+                  {item.text}
                 </p>
               </Card>
             </Reveal>
@@ -129,12 +127,12 @@ function Benefits() {
         <Reveal>
           <SectionHeading
             eyebrow="Pourquoi me confier votre site"
-            title="Création de site web, sans prise de tête"
-            subtitle="Développeuse fullstack avec une forte appétence front : je livre un site propre, performant, prêt à faire grandir votre activité."
+            title="Création de site, sans prise de tête"
+            subtitle="Un rendu soigné, une collab fluide, et une mise en ligne sereine — pour TPE, AE et PME."
           />
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {creationSiteWeb.benefits.map((item, index) => (
+          {webdesignerFreelance.benefits.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.06}>
               <article className="h-full rounded-[28px] border border-white/8 bg-white/3 p-7">
                 <p className="font-display text-lg text-white">{item.title}</p>
@@ -157,17 +155,16 @@ function Faq() {
         <Reveal>
           <SectionHeading
             eyebrow="FAQ"
-            title="Avant de lancer votre site"
-            subtitle="Les questions qui reviennent le plus souvent sur une création de site web."
+            title="Les questions qui reviennent"
+            subtitle="Les points à clarifier avant de lancer votre site."
           />
         </Reveal>
         <Reveal delay={0.1}>
           <div className="mt-12">
-            <Accordion items={[...creationSiteWeb.faqs]} />
+            <Accordion items={[...webdesignerFreelance.faqs]} />
           </div>
         </Reveal>
       </Container>
     </section>
   );
 }
-
