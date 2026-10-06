@@ -49,9 +49,14 @@ export function Agencies() {
                 Déjà en collab avec des agences et des équipes produit — du brief
                 à la livraison, sans micro-management.
               </p>
-              <Button href={site.calendar} external className="shrink-0">
-                Discuter d’une mission
-              </Button>
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                <Button href="/renfort-dev-agence/" variant="outline" className="shrink-0">
+                  Voir la page agences
+                </Button>
+                <Button href={site.calendar} external className="shrink-0">
+                  Discuter d’une mission
+                </Button>
+              </div>
             </div>
           </div>
         </Reveal>

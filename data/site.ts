@@ -35,6 +35,7 @@ export const nav: NavItem[] = [
 
 export const footerExtraLinks: NavItem[] = [
   { href: "/creation-site-web/", label: "Création de site web" },
+  { href: "/renfort-dev-agence/", label: "Renfort agences" },
   { href: "/mentions-legales/", label: "Mentions légales" },
 ];
 
